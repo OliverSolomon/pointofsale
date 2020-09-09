@@ -1,0 +1,47 @@
+{% extends 'template.html' %}
+
+{% block Link %}
+<link rel="stylesheet" href="../static/css/sales.css">
+{% endblock Link %}
+
+{% block content %}
+
+    <div class="lone-chart">
+        <!-- sales graph -->
+        <canvas class="chart sales" id="myChart">
+        </canvas>
+
+        <div class="analysis">
+            <h3>Today's Sales: </h3>
+            <p>Products Sold: 1450</p>
+            <p>Amounting to: 12000</p>
+        </div>
+    </div>
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Id</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Price per Qty</th>
+                    <th>Total Qty Available</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tableContent in table %}
+                <tr>
+                    <td>{{ tableContent.product_ID }}</td>
+                    <td>{{ tableContent.description }}</td>
+                    <td>{{ tableContent.pricePerQty }}</td>
+                    <td>{{ tableContent.qtyAvailable }}</td>
+                    <td>{{ tableContent.type }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock content %}

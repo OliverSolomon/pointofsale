@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../static/imgs/fav.png">
+    <link rel="apple-touch-icon" type="image/png" href="../static/imgs/fav.png" />
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/charts.css">
+    <link rel="stylesheet" href="../static/css/tables.css">
+
+    <script src="../static/js/Chart.js/Chart.min.js"></script>
+    {% block Link %}
+    {% endblock Link %}
+
+    <title>POS</title>
+</head>
+<body>
+    <div class="error"></div>
+    
+    <div class="main-container">
+        <div class="left-nav">
+            <div class="logo">
+                <!-- <h1>Le Duka</h1> -->
+                <a href="/home"><img src="../static/imgs/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="menu-items">
+                <ul>
+                    <li><a href="/dashboard"> <img src="../static/imgs/Dash.png" alt="Dashboard"> Dashboard </a></li>
+                    <li><a href="/sales"> <img src="../static/imgs/Sales.png" alt="Sales"> Sales </a></li>
+                    <li><a href="/products"> <img src="../static/imgs/Product.png" alt="Product"> Products </a></li>
+                    <li><a href="/profits"> <img src="../static/imgs/Profit.png" alt="Profit/loss"> <img src="" alt=""> Profit/Loss </a></li>
+                    <li><a href="#cash" onclick="cashShow()"> <img src="../static/imgs/Cash.png" alt="Cash Held"> Cash Held </a></li>
+                </ul>
+            </div>
+
+            <div class="theme">
+
+            </div>
+        </div>
+
+        <div class="torso">
+            
+            <div class="float" id="float">
+
+                <div class="cart-div" id="cartDiv">
+
+                    <a href="#cart" id="cart-img" onclick="toggle()"><img src="../static/imgs/Cart.png" alt="cart"></a>
+
+                    <div id="dropDown" class="hidden cart-content">
+                        
+                        <div class="cartItems">
+                            There's nothing here yet. Shop to add items
+                        </div>
+
+                        <a href="#" class="close" id="close" onclick="toggle()">&times;</a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="add-div" id="addDiv">
+                    <a href="/add"><img src="../static/imgs/Add.png" alt="Add item"></a>
+                    
+                    <div class="drop add-content">
+                        <div class="addItems">
+                            <ul>
+                                <li><a href="/add">+ to Cart</a></li>
+                                <li class="admin">+ Products (Admin)</li>
+                                <li class="admin">+ Employee (Admin)</li>
+                            </ul>
+                        </div>
+                        <!-- <a href="#" class="close" id="close" onclick="toggle()">&times;</a> -->
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <nav>
+                <div class="activeNav">
+
+                    {% if h3 %}
+                    <h3>{{ h3 }}</h3>
+                    {% else %}
+                    <h3>Dashboard</h3>
+                    {% endif %}
+
+                </div>
+                <ul>
+                    <li class="userDrop" id="li-active"><a href="#account" onclick="reveal()"><img src="../static/imgs/User.png" alt="account icon"></a>
+                        <div class="drop-down" id="userDrop">
+                            <div class="user-img">
+                                <img src="../static/imgs/marlo.png" alt="user Img">
+                            </div>
+                            <div class="user-details">
+                                Planaxis Gratis
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#notification"><img src="../static/imgs/notif.png" alt="notifications icon"></a></li>
+                    <li><a href="/login"><img src="../static/imgs/Lout.png" alt="log Out"></a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+
+                {% block content %}
+                {% endblock content%}
+
+                <div class="cashHeld" id="cashHeld">
+                    <h3>Cash at Hand is : 13000</h3>
+                    <div>
+                        <img src="../static/imgs/cashbox.png" alt="cashbox">
+                    </div>
+                    <a href="#" onclick="cashShow()"> Close </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/myCharts.js"></script>
+</body>
+</html>

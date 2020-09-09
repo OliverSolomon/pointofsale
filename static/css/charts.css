@@ -1,0 +1,16 @@
+.graphs{
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+canvas{
+    color: #fff;
+    background-color: #168a6d;
+    max-width: 45%;
+    border-radius: 20px;
+    margin-bottom: 3em;
+}

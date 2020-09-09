@@ -1,0 +1,51 @@
+Cart:
+	Once check out is pressed, pop up appears asking to print receipt
+
+Add:
+	transaction
+	Products(only admin)
+	Employees (only admin)
+
+Add-> Transaction 
+	opens store page where you can add products to cart
+
+
+color: #E96B71, #0F3254 60% or (15,50,84, 0.6), #E53F46
+font:egoe print
+
+
+Pages: 	sign in/ index
+	Template _{extends to}
+		Dashboard ->	graphs
+		employees->
+				flexbox(dual)	
+		sales-> 	
+				A graph
+				Table
+		products _ {extends sales}
+		profit/loss _ {extends sales}
+				
+		Transaction _ flex box store
+
+Pop Ups: from Cash Held
+	from Cart -> Checkout _ print receipt
+
+
+
+Drop Downs on {Template}: 	Account
+				Cart
+				Add 
+
+				{employees} -> Pemisions (on click)
+
+
+process:
+
+Pages
+Charts
+Drop Downs
+Pop-ups
+Store
+Accounts {flask}
+
+Theme

@@ -1,0 +1,39 @@
+.table{
+    /* border: 2px solid red; */
+    max-width: 70%;
+    margin: auto;
+}
+
+
+table{
+    text-align: left;
+    min-width: 100%;
+}
+
+td{
+    /* background: #168569; */
+    /* text-align: center; */
+    padding: .5em;
+}
+
+th{
+    background: #1ba583;
+    padding: .5em;
+}
+
+/* td, th{
+    
+} */
+tr:nth-last-of-type(odd){
+    background: #168569;
+}
+
+tr:nth-last-of-type(even){
+    background: #1ba583;
+}
+
+tr:hover, th:hover{
+    background: #174e40;
+    cursor: pointer;
+    /* border: 2px solid black; */
+}

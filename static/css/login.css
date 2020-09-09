@@ -1,0 +1,60 @@
+.main-page {
+    background: url(../imgs/background.png);
+    height: 100vh;
+}
+
+form {
+    max-width: 700px;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    transform: translateY(50%);
+    background-color: rgba(15, 50, 84, 0.6);
+    /* display: flex; */
+}
+
+input[type=text], input[type=password]{
+    width: 75%;
+    padding: 12px;
+    background: inherit;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    color: #FFF;
+    resize: vertical;
+    /* line-height: 2em; */
+    font-size: 1rem;
+    margin-top: .8em;
+    font-weight: bold;
+}
+
+::placeholder{
+    color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+
+input[type=submit]{
+    background-color: #1FB992;
+    color: #fff;
+    margin: 2.5rem auto;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 25%;
+    font-size: 1rem;
+}
+  
+input[type=submit]:hover {
+    background-color: #FFF;
+    color: #1FB992;
+}
+
+@media (max-width:450px){
+    input[type=submit]{
+        padding: 8px;
+    }
+}
